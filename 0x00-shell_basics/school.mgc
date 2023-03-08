@@ -1,2 +1,7 @@
 #!/bin/bash
-ls -xamp
+0 string SCHOOL School data
+!:mime School
+chmod u+x school.mgc
+file -C -m my-magic
+file -C -m school.mgc *
+
