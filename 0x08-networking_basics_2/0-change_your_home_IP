@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script configures an Ubuntu server with the below requirements.
+
+the_localhost_ip="127.0.0.2"
+the_facebook_ip="8.8.8.8"
+
+echo "$the_localhost_ip localhost" >> /etc/hosts
+echo "$the_facebook_ip facebook.com" >> /etc/hosts
