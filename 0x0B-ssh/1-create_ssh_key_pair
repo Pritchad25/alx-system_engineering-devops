@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 # This script generates an RSA key pair.
 
-# The path where the key is to be saved
 key_path=~/.ssh/school
 
 # Generation of the RSA key pair including the passphrase
 ssh-keygen -t rsa -b 4096 -f "$key_path" -N "betty"
-
