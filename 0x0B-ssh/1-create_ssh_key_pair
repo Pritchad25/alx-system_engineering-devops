@@ -4,17 +4,6 @@
 # The path where the key is to be saved
 key_path=~/.ssh/school
 
-if [ -f "$key_path" ]; then
-	echo "RSA key 'school' already exists at $key_path."
-	exit 1
-fi
-
 # Generation of the RSA key pair including the passphrase
 ssh-keygen -t rsa -b 4096 -f "$key_path" -N "betty"
 
-# Below conditionals checks if the key generation was successful
-if [ $? -eq 0 ]; then
-	echo "RSA key 'school' has been created and protected by passphrase
-else
-	echo "Failed to generate RSA key 'school'."
-fi
