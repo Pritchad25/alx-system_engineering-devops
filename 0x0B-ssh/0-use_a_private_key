@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This bash script connects to server using SSH and a pivate key
+
+ssh -i ~/.ssh/school -o "StrictHostKeyChecking no" ubuntu@318460-web-01
