@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# The code below configures the Nginx sever so that /redirect_me
+# is redirecting to another page.
+
+sudo apt-get update -y
+sudo apt-get install -y nginx
+
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me 
+https://twitter.com/NdlovuPritchar4 permanent;" /etc/nginx/sites-enabled
+/default
+
+sudo service nginx restart
