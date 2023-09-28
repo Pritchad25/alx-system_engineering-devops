@@ -2,12 +2,16 @@
 # The code below configures the Nginx sever so that /redirect_me
 # is redirecting to another page.
 
-sudo apt-get update -y
-sudo apt-get install -y nginx
+sudo apt-get update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
 
-echo "Hello World!" > /var/www/html/index.nginx-debian.html
-sudo sed -i "/listen 80 default_server;/a rewrite ^/redirect_me 
-https://twitter.com/NdlovuPritchar4 permanent;" /etc/nginx/sites-enabled
-/default
+REDIRECTION="\\
+	location /redirect_me {\\
+		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\\
+	}"
 
+sudo sed -i "53s|.*|$REDIRECTION|" /etc/nginx/sites-enabled/default
+
+sudo nginx -t
 sudo service nginx restart
