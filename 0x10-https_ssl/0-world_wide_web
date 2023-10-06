@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script takes in a domain and subdomain as argument and prints out the
+# subdomain information.
+
+output () {
+	dig "$1" | grep -A1 'ANSWER SECTION:' | sed -r "s/$1./$2/g" |  awk -F" " ' NR==2 { print "The subdomain " $1 " is a " $4 " record and points to "$5 }'
+}
+
+if [ "$#" -eq 2 ]
+then
+	output "$2.$1" "$2"
+else
+	output "www.$1" 'www'
+	output "lb-01.$1" 'lb-01'
+	output "web-01.$1" 'web-01'
+	output "web-02.$1" 'web-02'
+fi
