@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This Bash script accepts one argument and runs the whoami command
+# under the User that is passed as argument.The script will be tried using
+# different users.
+
+if [ "$#" -eq 1 ]
+then
+	su -c "whoami" "$1"
+fi
