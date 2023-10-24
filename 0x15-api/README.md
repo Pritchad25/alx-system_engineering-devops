@@ -1,0 +1,11 @@
+This directory contains the programming solutions to the 0x15 API project done at the ALX Holberton Software Engineering School. While doing this project, I learnt:
+-What Bash scripting should not be used for
+-What an API is
+-What microservces are
+-What the CSV and JSON format is
+-Pythonic Package and module name style
+-Pythonic Class name style
+-Pythonic Variable name style
+-Pythonic Function name style
+-Pythonic Constant name style
+-Significance of CapWords or CamelCase in Python
