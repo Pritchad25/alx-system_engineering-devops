@@ -1,19 +1,9 @@
-# Fixing the issue that causes Apache to return a 500 error
-file { '/etc/profile.d/custom_ld_library_path.sh':
-
-ensure => present,
-
-content => 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/libfoo',
-
-mode => '0644'
-
-}
-# Restarting the Apache Service
-
-service { 'apache2':
-
-ensure => running,
-
-subscribe => File['/etc/profile.d/custom_ld_library_path.sh'],
-
+# Fixing the typo in configuration file
+exec { 'fix-wordpress':
+  environment => ['DIR=/var/www/html/wp-settings.php',
+                  'OLD=phpp',
+                  'NEW=php'],
+  command     => 'sudo sed -i "s/$OLD/$NEW/" $DIR',
+  path        => ['/usr/bin', '/bin'],
+  returns     => [0, 1]
 }
