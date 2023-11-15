@@ -1,42 +1,19 @@
-# Default server configuration
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+	listen 80;
+	server_name airbnb.com;
+        root /var/www/html;
+   	index  index.html index.htm;
 
-	# SSL configuration
-
-	root /var/www/html;
-	location /hbnb_static/ {
-		alias /data/web_static/current/;
-		autoindex off;
-	}
-
-	location /airbnb-onepage/ {
-		include proxy_params;
-		proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
-	}
-
-	# Add index.php if you using PHP
-	index index.html index.htm index.nginx-debian.html;
-	
-	server_name _;
-	add_header X-Served-By $hostname;
-	rewrite ^/redirect_me https:\/\/google.com permanent;
-	error_page 404 /custom_404.html;
-	location = /custom_404.html {
-		root /usr/share/nginx/html;
-		internal;
-	}
-
-	location /img {
-		alias /usr/share/nginx/html/img/;
-	}
-
-	location /css {
-		alias /usr/share/nginx/html/css/;
+  	location /hbnb_static {
+		alias /data/web_static/current;
 	}
 
 	location / {
-		try_files $uri $uri/ =404;
+        # In the case where there is other configuration directives you
+	# you might have
+	}
+
+	location /airbnb-onepage/ {
+		proxy_pass http://127.0.0.1:5000;
 	}
 }
