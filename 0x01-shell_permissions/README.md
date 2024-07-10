@@ -11,7 +11,7 @@
 ## About <a name="about"></a>
 This project is part of the curriculum of the ALX Software Engineering program. The main objective of this project is to understand and implement Permissions in Shell or bash scripting.
 
-## Learning Objectives <a name=learning-objectives"></a>
+## Learning Objectives <a name="learning-objectives"></a>
 At the end of this project, I am expected to be able to explain to anyone, without the help of Google:
 ### Permissions
 - What do the commands `chmod`, `sudo`, `su`, `chown`, `chgrp` do
