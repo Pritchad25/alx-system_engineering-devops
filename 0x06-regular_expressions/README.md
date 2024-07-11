@@ -29,7 +29,7 @@ At the end of this project, I am expected to be able to explain to anyone, witho
 2. Access the project directory: `cd 0x06-regular_expressions`
 3. Run any executable script within the directory
 
-## Contributing <a name="contributing>"</a>
+## Contributing <a name="contributing"></a>
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License <a name="license"></a>
