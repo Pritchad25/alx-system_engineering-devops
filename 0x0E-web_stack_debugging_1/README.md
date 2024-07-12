@@ -25,7 +25,7 @@ This project is part of the curriculum of the ALX Software Engineering program. 
 - All your files must be executable
 - Your Bash scripts must run without error
 
-## Getting Started <a name=getting-started"></a>
+## Getting Started <a name="getting-started"></a>
 1. Clone this repository: `git clone https://github.com/Pritchad25/alx-system_engineering-devops.git`
 2. Access the project directory: `cd 0x0E-web_stack_debugging_1`
 3. Run any executable script within the directory
