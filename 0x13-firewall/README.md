@@ -10,8 +10,8 @@
 
 ## About <a name="about"></a>
 This project is part of the curriculum of the ALX Software Engineering program. The main objective of this project is to understand and implement implement a firewall in a server.
-![Firewall implemented in System Servers](
-https://imgur.com/a/779yeGK)
+<img width="30px" src="https://imgur.com/a/779yeGK" alt="Firewall"/>
+
 ## Background Context
 ### More Info
 - `telnet` is a very good tool to check if sockets are open with `telnet IP PORT`.For example, if you want to check if port 22 is open on `web-02`:
